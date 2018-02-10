@@ -48,13 +48,18 @@ class ContactHelper:
         wd.find_element_by_xpath(".//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
 
-    def edit_first_contact(self, contact):
+    def modify_first_contact(self, contact):
         wd = self.app.wd
         self.open_contact_list_page()
         elements = wd.find_elements_by_xpath(".//img[@title='Edit']")
         elements[0].click()
         self.fill_forms(contact)
         wd.find_element_by_xpath("(.//input[@name='update'])[1]").click()
+
+    def count(self):
+        wd = self.app.wd
+        return len(wd.find_elements_by_name("entry"))
+
 
 
 
