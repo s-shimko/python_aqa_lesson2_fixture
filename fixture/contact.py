@@ -1,5 +1,4 @@
 class ContactHelper:
-
     def __init__(self, app):
         self.app = app
 
@@ -33,11 +32,13 @@ class ContactHelper:
 
     def open_add_contact_page(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("add new").click()
+        if not (wd.current_url.endswith("/edit.php") and wd.find_elements_by_name("submit") > 0):
+            wd.find_element_by_link_text("add new").click()
 
     def open_contact_list_page(self):
         wd = self.app.wd
-        wd.find_element_by_xpath(".//a[@href='./']").click()
+        if not (wd.current_url.endswith("/ingex.php") and wd.find_elements_by_name("add") > 0):
+            wd.find_element_by_xpath(".//a[@href='./']").click()
 
     def delete_first_contact(self):
         wd = self.app.wd
@@ -59,7 +60,3 @@ class ContactHelper:
     def count(self):
         wd = self.app.wd
         return len(wd.find_elements_by_name("entry"))
-
-
-
-
