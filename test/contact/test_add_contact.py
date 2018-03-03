@@ -26,7 +26,7 @@ testdata = [
             email=random_string("email", 10), email2=random_string("email2", 10), email3=random_string("email3", 10),
             homepage=random_string("homepage", 10), address2=random_string("address2", 10),
             secondaryphone=random_string("secondaryphone", 10), notes=random_string("notes", 10))
-    for i in range(2)
+    for i in range(1)
 ]
 
 @pytest.mark.parametrize("contact", testdata, ids=[repr(x) for x in testdata])
