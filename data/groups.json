@@ -1,23 +1,9 @@
 [
   {
     "id": null,
-    "footer": "",
+    "footer": "foot",
     "py/object": "model.group.Group",
-    "header": "",
-    "name": ""
-  },
-  {
-    "id": null,
-    "footer": "footerc\"5  ?!woE )/?M",
-    "py/object": "model.group.Group",
-    "header": "headerqsE[aQ",
-    "name": "name"
-  },
-  {
-    "id": null,
-    "footer": "footerL[aI31b%mt(",
-    "py/object": "model.group.Group",
-    "header": "headerR WOM K}Y\")Y L<oR",
-    "name": "name>^"
+    "header": "head",
+    "name": "groupname"
   }
 ]
