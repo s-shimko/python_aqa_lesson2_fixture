@@ -2,7 +2,7 @@ from model.group import Group
 import random
 
 def test_modify_group_name(app, db, check_ui):
-    if app.group.count() == 0:
+    if len(db.get_group_list()) == 0:
         app.group.create(Group(name="test_group"))
     old_groups = db.get_group_list()
     group = random.choice(old_groups)

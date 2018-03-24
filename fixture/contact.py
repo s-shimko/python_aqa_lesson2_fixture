@@ -1,5 +1,6 @@
 from model.contact import Contact
 import re
+from selenium.webdriver.support.ui import Select
 
 class ContactHelper:
     def __init__(self, app):
@@ -220,3 +221,18 @@ class ContactHelper:
         secondaryphone = re.search("P: (.*)", text).group(1)
         return Contact(homephone=homephone, mobilephone=mobilephone,
                        workphone=workphone, secondaryphone=secondaryphone)
+
+    def add_contact_to_group(self, contact_id, group_name):
+        wd = self.app.wd
+        self.open_contact_list_page()
+        self.set_checkbox_contact_by_id(contact_id)
+        self.select_group_by_name(group_name)
+        wd.find_element_by_name("add").click()
+
+    def set_checkbox_contact_by_id(self, contact_id):
+        wd = self.app.wd
+        wd.find_element_by_id("%s" % contact_id).click()
+
+    def select_group_by_name(self, group_name):
+        wd = self.app.wd
+        Select(wd.find_element_by_xpath(".//select[@name='to_group']")).select_by_visible_text(group_name)

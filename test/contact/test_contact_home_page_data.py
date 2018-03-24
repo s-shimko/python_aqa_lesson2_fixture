@@ -1,7 +1,5 @@
 import re
 from random import randrange
-import random
-
 
 def test_all_contact_data_on_home_page(app, db):
     contacts_from_home_page = app.contact.get_contact_list()

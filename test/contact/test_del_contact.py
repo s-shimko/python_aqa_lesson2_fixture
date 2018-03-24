@@ -1,9 +1,8 @@
 from model.contact import Contact
 import random
-from time import sleep
 
 def test_delete_some_contact(app, db, check_ui):
-    if app.contact.count() == 0:
+    if len(db.get_contact_list()) == 0:
         app.contact.create((Contact(firstname="firstname", middlename="middlename",
                                     lastname="lastname", nickname="nickname",
                                     title="title", company="company", address="address",
