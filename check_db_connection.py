@@ -22,10 +22,18 @@ db = ORMFixture(host="127.0.0.1", name="addressbook", user="root", password="")
 # finally:
 #     pass # db.destroy()
 
-try:
-    l = db.get_contacts_not_in_group(Group(id='90'))
-    for item in l:
-        print(item.name)
-    print(len(l))
-finally:
-    pass  # db.destroy()
+# try:
+#     l = db.get_contacts_not_in_group(Group(id='90'))
+#     for item in l:
+#         print(item.name)
+#     print(len(l))
+# finally:
+#     pass  # db.destroy()
+
+# try:
+#     l = db.get_all_contacts_in_group()
+#     for item in l:
+#         print(item.id)
+#     print(len(l))
+# finally:
+#     pass  # db.destroy()

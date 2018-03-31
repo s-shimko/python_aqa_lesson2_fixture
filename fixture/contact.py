@@ -236,3 +236,13 @@ class ContactHelper:
     def select_group_by_name(self, group_name):
         wd = self.app.wd
         Select(wd.find_element_by_xpath(".//select[@name='to_group']")).select_by_visible_text(group_name)
+
+    def delete_contact_from_group(self, contact_id, group_name):
+        wd = self.app.wd
+        self.choose_group_where_contacts(group_name)
+        self.set_checkbox_contact_by_id(contact_id)
+        wd.find_element_by_name("remove").click()
+
+    def choose_group_where_contacts(self, group_name):
+        wd = self.app.wd
+        Select(wd.find_element_by_xpath(".//select[@name='group']")).select_by_visible_text(group_name)

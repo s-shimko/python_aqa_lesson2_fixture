@@ -1,6 +1,7 @@
 import mysql.connector
 from model.group import Group
 from model.contact import Contact
+from model.contact_in_group import ContactInGroup
 
 class DbFixture:
 
@@ -45,6 +46,19 @@ class DbFixture:
         finally:
             cursor.close()
         return list
+
+    def get_all_contacts_in_group(self):
+        list = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("select id, group_id from address_in_groups")
+            for row in cursor:
+                (id, group_id) = row
+                list.append(ContactInGroup(id=str(id), group_id=group_id))
+        finally:
+            cursor.close()
+        return list
+
 
     def destroy(self):
         self.connection.close()
