@@ -46,7 +46,6 @@ def test_del_random_contact_from_group(app, db):
     group_id = contact_in_group.group_id
     # get group name
     group_name = None
-    print("-------> " + str(groups))
     for g in groups:
         if str(g.id) == str(group_id):
             group_name = g.name
