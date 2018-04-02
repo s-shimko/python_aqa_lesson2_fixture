@@ -1,0 +1,37 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1522697262722" stop="1522697270936">
+  <name>test.group.test_add_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1522697262722" status="passed" stop="1522697270936">
+      <name>test_add_group[None: groupname; head; foot ]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="18268-MainThread"/>
+        <label name="host" value="root"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1522697269076" status="passed" stop="1522697269123">
+          <name>Given a group list</name>
+          <title>Given a group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1522697269123" status="passed" stop="1522697270934">
+          <name>When I add the group None: groupname; head; foot  to the list</name>
+          <title>When I add the group None: groupname; head; foot  to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1522697270934" status="passed" stop="1522697270936">
+          <name>Then the new group list is equal to the old list with the added group</name>
+          <title>Then the new group list is equal to the old list with the added group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

@@ -1,0 +1,14 @@
+{
+  "testCases" : [ {
+    "uid" : "162d52d690ab817b",
+    "name" : "test_add_group[None: groupname; head; foot ]",
+    "title" : "Test add group [None: groupname; head; foot ]",
+    "time" : {
+      "start" : 1522697262722,
+      "stop" : 1522697270936,
+      "duration" : 8214
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  } ]
+}
